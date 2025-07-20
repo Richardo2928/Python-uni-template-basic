@@ -2,7 +2,7 @@
 
 Plantilla minimalista para proyectos de Python, ideal para tareas universitarias, experimentos pequeños o desarrollo local ligero. Incluye soporte para entorno virtual, automatización con `make`, gestión de dependencias y una estructura de carpetas clara y ordenada.
 
-    Nota: Este proyecto está desarrollado y probado principalmente en sistemas tipo Unix (Linux/macOS), en particular sobre Debian 12. Puede requerir adaptaciones si se desea utilizar en Windows.
+>Nota: Este proyecto está desarrollado y probado principalmente en sistemas tipo Unix (Linux/macOS), en particular sobre Debian 12. Puede requerir adaptaciones si se desea utilizar en Windows.
 
 ---
 
