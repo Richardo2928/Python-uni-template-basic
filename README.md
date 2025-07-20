@@ -25,6 +25,9 @@ proyecto/
 ## ⚙️ Requisitos
 
 - Python 3 (o ajusta el `setup_venv.sh` si usas otra versión)
+- El módulo `venv` para Python:
+  - En Ubuntu/Debian: instala con `sudo apt install python3-venv` (para la versión por defecto)
+  - O bien: `sudo apt install python3.11-venv` (si usas específicamente Python 3.11. Puedes comprobar tu versión mediante el comando `python3 --version`.)
 - `make` (ya viene con la mayoría de distribuciones Linux y macOS)
 - `bash` shell
 
