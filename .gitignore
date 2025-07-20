@@ -1,0 +1,30 @@
+### Virtual environment
+.venv/
+venv/
+env/
+
+### Bytecode files
+**__pycache__/
+*.pyc
+*.py[cod]
+*.pyo
+*$py.class
+*.egg-info
+
+### SQL files
+*.sqlite3
+*.db
+*.db3
+
+### Output files
+*.log
+*.pdf
+*.docx
+*.xlsx
+*.csv
+
+### IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
