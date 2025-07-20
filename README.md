@@ -35,7 +35,9 @@ proyecto/
 ### 1. Baja el template de GitHub
 
 ```bash
-git clone https://github.com/tu-usuario/Python-uni-template-basic.git
+git clone https://github.com/Richardo2928/Python-uni-template-basic.git
+# git@github.com:Richardo2928/Python-uni-template-basic.git # Uncoment for SSH
+# gh repo clone Richardo2928/Python-uni-template-basic      # Uncoment for GitHub CLI
 cd Python-uni-template-basic
 ```
 
