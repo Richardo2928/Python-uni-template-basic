@@ -10,8 +10,8 @@ Plantilla minimalista para proyectos de Python, ideal para tareas universitarias
 proyecto/
 ├── src/ # Código fuente principal
 │ └── modules/ # Módulos adicionales reutilizables
-│ ├── init.py
-│ └── utils.py
+│ │├── init.py
+│ │└── utils.py
 │ └── main.py # Punto de entrada del programa
 ├── .gitignore # Archivos y carpetas que no se suben al repo
 ├── Makefile # Comandos automatizados del entorno y la app
