@@ -23,7 +23,7 @@ REQUIREMENTS := $(WORKDIR)/requirements.txt
 # Help command
 # =========================================
 template-help:
-	@echo "Virtual environment commands:"
+	@echo "Available commands:"
 	@echo "------------------------------------------"
 	@echo "--------------VENV Commands---------------"
 	@echo "  make create-venv          - Create a new virtual environment"
