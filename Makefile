@@ -3,6 +3,7 @@
 # Setup and Management
 
 # Path definitions
+# Help command
 # Setup commands
 # Venv helpers
 # App commands
@@ -19,6 +20,30 @@ VENV_PATH := $(WORKDIR)/venv
 REQUIREMENTS := $(WORKDIR)/requirements.txt
 
 # =========================================
+# Help command
+# =========================================
+template-help:
+	@echo "Virtual environment commands:"
+	@echo "------------------------------------------"
+	@echo "--------------VENV Commands---------------"
+	@echo "  make create-venv          - Create a new virtual environment"
+	@echo "  make create-venv-force    - Force recreate the virtual environment"
+	@echo "  make venv-activate        - Show command to activate the virtual environment"
+	@echo "  make venv-deactivate      - Show command to deactivate the virtual environment"
+	@echo "  make venv-install         - Install requirements in the virtual environment"
+	@echo "  make venv-update          - Update requirements in the virtual environment"
+	@echo "  make venv-check           - Check installed packages in the virtual environment"
+	@echo "  make venv-freeze          - Freeze current packages to requirements.txt"
+	@echo "------------------------------------------"
+	@echo "--------------App Commands----------------"
+	@echo "  make run-app              - Run the application"
+	@echo "------------------------------------------"
+	@echo "--------------Cleanup Commands-----------"
+	@echo "  make clean                - Clean Python cache and temp files"
+	@echo "  make clean-all            - Clean and remove the virtual environment"
+	@echo "------------------------------------------"
+
+# =========================================
 ## Setup commands
 # =========================================
 create-venv:
@@ -30,17 +55,6 @@ create-venv-force:
 # =========================================
 ## Venv helpers
 # =========================================
-venv-help:
-	@echo "Virtual environment commands:"
-	@echo "  make create-venv          - Create a new virtual environment"
-	@echo "  make create-venv-force    - Force recreate the virtual environment"
-	@echo "  make venv-activate        - Show command to activate the virtual environment"
-	@echo "  make venv-deactivate      - Show command to deactivate the virtual environment"
-	@echo "  make venv-install         - Install requirements in the virtual environment"
-	@echo "  make venv-update          - Update requirements in the virtual environment"
-	@echo "  make venv-check           - Check installed packages in the virtual environment"
-	@echo "  make venv-freeze          - Freeze current packages to requirements.txt"
-
 venv-activate:
 	@echo "Run this in your shell to activate the virtual environment:"
 	@echo "source $(VENV_PATH)/bin/activate"
@@ -87,6 +101,6 @@ clean-all: clean
 # =========================================
 ## Phony targets
 # =========================================
-.PHONY: create-venv create-venv-force venv-help \
+.PHONY: create-venv create-venv-force template-help \
 	venv-activate venv-deactivate venv-install venv-update \
 	venv-check venv-freeze run-app clean clean-all

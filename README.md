@@ -76,7 +76,7 @@ Esto:
 Puedes ver todos los comandos disponibles con:
 
 ```bash
-make venv-help
+make template-help
 ```
 
 Pero aquí va un resumen:

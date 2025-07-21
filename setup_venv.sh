@@ -29,7 +29,7 @@ if [ ! -f "$REQUIREMENTS_FILE" ]; then
     echo "\n Virtual environment setup complete! :) \n"
     echo "---No requirements to install---"
     echo "To see what else you can do, run:"
-    echo "make venv-help"
+    echo "make template-help"
     exit 0
 fi
 
@@ -41,4 +41,4 @@ echo "Required packages installed successfully."
 # Final message
 echo -e "\n Virtual environment setup complete! :)"
 echo "To see what else you can do, run:"
-echo "make venv-help"
+echo "make template-help"
