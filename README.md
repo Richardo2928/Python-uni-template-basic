@@ -1,52 +1,62 @@
 # 🐍 Python-uni-template-basic
 
-Plantilla minimalista para proyectos de Python, ideal para tareas universitarias, experimentos pequeños o desarrollo local ligero. Incluye soporte para entorno virtual, automatización con `make`, gestión de dependencias y una estructura de carpetas clara y ordenada.
+Minimalist template for Python projects, ideal for university assignments, small experiments, or lightweight local development. Includes support for virtual environments, automation with `make`, dependency managment, and a clear, organized folder structure.
 
->Nota: Este proyecto está desarrollado y probado principalmente en sistemas tipo Unix (Linux/macOS), en particular sobre Debian 12. Puede requerir adaptaciones si se desea utilizar en Windows.
+>**Note:** This project is developed and tested primarily on Unix-like systems (Linux/macOS), particularly on Debian 12. It may require adaptations for use on Windows.
 
 ---
 
-## 📁 Estructura del proyecto
+## 📁 Project Structure
 
 ```txt
 proyecto/
-├── src/ # Código fuente principal
-│ └── modules/ # Módulos adicionales reutilizables
-│ │├── init.py
+├── src/ # Main source code
+│ └── modules/ # Additional reusable modules
+│ │├── __init__.py
 │ │└── utils.py
-│ └── main.py # Punto de entrada del programa
-├── .gitignore # Archivos y carpetas que no se suben al repo
-├── Makefile # Comandos automatizados del entorno y la app
-├── README.md # Este archivo :)
-├── requirements.txt # Lista de dependencias del proyecto
-└── setup_venv.sh # Script para crear y preparar el entorno virtual
+│ └── main.py # Program entry point
+├── .gitignore # Files and folders excluded from the repo
+├── Makefile # Automated commands for the enviroment and app
+├── README.md # This file :)
+├── requirements.txt # Project dependency lis
+└── setup_venv.sh # Script to create and prepare the virtual enviroment
 ```
 
 ---
 
-## ⚙️ Requisitos
+## ⚙️ Requirements
 
-- Python 3 (o ajusta el `setup_venv.sh` si usas otra versión)
-- El módulo `venv` para Python:
-  - En Ubuntu/Debian: instala con `sudo apt install python3-venv` (para la versión por defecto)
-  - O bien: `sudo apt install python3.11-venv` (si usas específicamente Python 3.11. Puedes comprobar tu versión mediante el comando `python3 --version`.)
-- `make` (ya viene con la mayoría de distribuciones Linux y macOS)
+- Python 3 (or adjust `setup_venv.sh` if using another version)
+- The `venv` module:
+  - On Ubuntu/Debian: install with `sudo apt install python3-venv` (for the default version)
+  - Or: `sudo apt install python3.11-venv` (if specifically using Python 3.11. You can check your Python version with `python3 --version`.)
+- `make` (included in most Linux distros and macOS)
 - `bash` shell
 
 ---
 
-## 🚀 Primeros pasos
+## 🚀 Getting Started
 
-### 1. Baja el template de GitHub
+### 1. Download the template from GitHub
 
 ```bash
 git clone https://github.com/Richardo2928/Python-uni-template-basic.git
-# git@github.com:Richardo2928/Python-uni-template-basic.git # Uncoment for SSH
-# gh repo clone Richardo2928/Python-uni-template-basic      # Uncoment for GitHub CLI
+# or:
+# git@github.com:Richardo2928/Python-uni-template-basic.git      # For SSH
+# gh repo clone Richardo2928/Python-uni-template-basic           # For GitHub CLI
 cd Python-uni-template-basic
 ```
 
-### 1.5. (Opcional) Agrega tus propios paquetes al archivo `requirements.txt`
+>You can also download it as a ``.zip``:
+
+```bash
+curl -l https://github.com/Richardo2928/Python-uni-template-basic/archive/refs/heads/main.zip -o template.zip && \
+unzip template.zip
+```
+
+### 1.5. (Optional) Add your own packages to the `requirements.txt`
+
+Example:
 
 ```requirements.txt
 pyside6
@@ -54,81 +64,81 @@ textual
 reportlab
 ```
 
-### 2. Crea el entorno virtual y activalo
+### 2. Create the virtual environment and activate ir
 
 ```bash
-make create-venv
+make create-venv && \
 source venv/bin/activate
 ```
 
 ---
 
-Esto:
+This Will:
 
-1. Crea un entorno virtual
-2. Instala los paquetes desde requirements.txt si existe
-3. Te prepara para desarrollar inmediatamente
+1. Create a virtual environment
+2. Install packages from ``requirements.txt`` (if any)
+3. Prepare you for immediate development ;)
 
 ---
 
-## 🧰 Comandos útiles
+## 🧰 Useful Commands
 
-Puedes ver todos los comandos disponibles con:
+You can view all available commands with:
 
 ```bash
 make template-help
 ```
 
-Pero aquí va un resumen:
+Here is a summary:
 
-### Entorno virtual
+### Virtual Environment
 
-|        Comando         | Descripción                                            |
-| :--------------------: | :----------------------------------------------------- |
-|    make create-venv    | Crea el entorno virtual                                |
-| make create-venv-force | Lo recrea desde cero                                   |
-|   make venv-activate   | Muestra cómo activarlo                                 |
-|  make venv-deactivate  | Muestra cómo desactivarlo                              |
-|   make venv-install    | Instala los requisitos desde ``requirements.txt``      |
-|    make venv-update    | Actualiza los paquetes                                 |
-|    make venv-check     | Lista los paquetes instalados                          |
-|    make venv-freeze    | Guarda los paquetes instalados en ``requirements.txt`` |
+|        Command         | Description                                      |
+| :--------------------: | :----------------------------------------------- |
+|    make create-venv    | Creates the virtual environment                  |
+| make create-venv-force | Recreates it from scratch                        |
+|   make venv-activate   | Shows how to activate it                         |
+|  make venv-deactivate  | Shows how to deactivate it                       |
+|   make venv-install    | Installs requirements from ``requirements.txt``  |
+|    make venv-update    | Updates packages                                 |
+|    make venv-check     | Lists installed packages                         |
+|    make venv-freeze    | Saves installed packages to ``requirements.txt`` |
 
-### Aplicación
+### Application
 
-|   Comando    | Descripción         |
-| :----------: | :------------------ |
-| make run-app | Ejecuta src/main.py |
+|   Command    | Description      |
+| :----------: | :--------------- |
+| make run-app | Runs src/main.py |
 
-### Limpieza
+### Cleanup
 
-| Comando        | Descripción                         |
-| -------------- | ----------------------------------- |
-| make clean     | Elimina __pycache__ y archivos .pyc |
-| make clean-all | elimina el entorno virtual completo |
-
----
-
-## ¿Por qué usar esta plantilla?
-
-- Reutilizable: la clonas y ya tienes todo listo
-
-- Limpia: mantiene tu entorno controlado y reproducible
-
-- Minimalista: sin sobrecarga innecesaria
-
-- Lista para testing: puedes añadir tests/ fácilmente
-
-- Ideal para cursos, prácticas o prototipos rápidos
-
-*Notas adicionales*:
-
-- Para cambiar la versión de Python, edita el script setup_venv.sh
-- Puedes agregar más comandos al Makefile según tus necesidades
-- Si usas VSCode, puedes configurar el entorno virtual en .vscode/settings.json
+| Comando        | Descripción                                       |
+| -------------- | ------------------------------------------------- |
+| make clean     | Removes __pycache__ and .pyc files                |
+| make clean-all | Cleans and deletes the entire virtual environment |
 
 ---
 
-## 📝 Licencia
+## Why Use This Template?
 
-Este proyecto está bajo la licencia MIT. Eres libre de usar, modificar o mejorar esta plantilla.
+- Reusable: Clone it and you're ready to go
+
+- Clean: Keeps your environment controlled and reproducible
+
+- Minimalist: No unnecessary overhead
+
+- Ready for testing: You can easily add ``tests/``
+
+- Ideal for courses, assignments, or quick prototypes
+
+*Additional Notes*:
+
+- Want a different Python version? Just edit ``setup_venv.sh``
+- Need custom commands? Add them to ``Makefile``
+- Using VSCode? You can link the virtual environment in ``.vscode/settings.json``
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License. You are free to use, modify, or improve this template.
